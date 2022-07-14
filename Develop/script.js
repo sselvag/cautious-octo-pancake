@@ -31,5 +31,19 @@ function schedule() {
 schedule();
 
 // 3. WHEN I view the time blocks for that day, THEN each time block is color-coded to indicate whether it is in the past, present, or future
+function colorcode() {
+    $.each(hourArray, function (i, value) {
+        if (moment().isAfter(moment().hour(9+i))) {
+            $("#text" + i).addClass("past");
+        } else if (moment().isSame(moment().hour(9+i))) {
+            $("#text" + i).addClass("present");
+        } else if (moment().isBefore(moment().hour(9+i))) {
+            $("#text" + i).addClass("future");  
+        };
+    });
+};
+
+colorcode();
+
 // 5. WHEN I click the save button for that time block, THEN the text for that event is saved in local storage
 // 6. WHEN I refresh the page, THEN the saved events persist
