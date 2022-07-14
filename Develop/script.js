@@ -45,14 +45,25 @@ function colorcode() {
 
 colorcode();
 
+// 6. WHEN I refresh the page, THEN the saved events persist NEEED TO COMPLETE!!!!!
+// var eventFromLocalStorage = JSON.parse(localStorage.getItem("eventHour"));
+
+// function persistEvent() {
+//     $.each(hourArray, function (i, value) {
+//         $("#text" + i).text(eventFromLocalStorage[i].text);
+//     });;
+// }
+
+// persistEvent();
+
+
+
+
 // 5. WHEN I click the save button for that time block, THEN the text for that event is saved in local storage
 $(document).on("click", ".row[id] .saveBtn", function () {
     var scheduledEvent = $(this).closest(".row");
     var eventInput = scheduledEvent.find("textarea").val();
-    var eventHour = scheduledEvent.attr('id');
+    var eventHour = scheduledEvent.find("textarea").attr("data-row");
 
     localStorage.setItem(eventHour, JSON.stringify(eventInput));
 });
-
-// 6. WHEN I refresh the page, THEN the saved events persist
-
