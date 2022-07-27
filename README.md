@@ -12,6 +12,7 @@ The following screenshot is a preview of the Work Day Scheduler I created.
 
 Work Day Scheduler:
 
+![Screen Shot 2022-07-26 at 8 20 12 PM](https://user-images.githubusercontent.com/64749332/181134163-1184c2d9-eb0e-4018-bc21-22476e70432a.png)
 
 
 
